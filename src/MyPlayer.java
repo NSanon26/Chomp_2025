@@ -9,8 +9,18 @@ public class MyPlayer {
 
         /***
          * This code will run just once, when the game opens.
-         * Add your code here.
+         * Add your code here for homework.
          */
+        //print ALL boards(possible and not possible) starting with 1 0 0
+        //and then from there try to narrow it down to just possible boards
+        //first column: 1 2 3
+
+        for(int i = 1; i < 4; i++){ // first column
+            for(int j = 0; j <= 4; j++) {
+                    for (int k = 0; k <= j; k++) {
+                        System.out.println(i + " " + j + " " + k);}
+            }
+        }
     }
 
     public Point move(Chip[][] pBoard) {
