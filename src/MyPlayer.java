@@ -17,10 +17,20 @@ public class MyPlayer {
 
         for(int i = 1; i < 4; i++){ // first column
             for(int j = 0; j <= 4; j++) {
-                    for (int k = 0; k <= j; k++) {
-                        System.out.println(i + " " + j + " " + k);}
+                for (int k = 0; k <= j; k++) {
+                    System.out.println(i + " " + j + " " + k);
+                    oneMoveAway(i, j, k);
+
+                }
             }
         }
+    }
+
+    public void oneMoveAway(int i, int j, int k){
+        // for each ijk board, print all boards that result
+        // after a single move
+
+
     }
 
     public Point move(Chip[][] pBoard) {
