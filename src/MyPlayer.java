@@ -22,6 +22,7 @@ public class MyPlayer {
                     System.out.println(i + " " + j + " " + k);
                     oneMoveAway(i, j, k);
 
+
                 }
             }
         }
