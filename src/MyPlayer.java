@@ -16,8 +16,9 @@ public class MyPlayer {
         //first column: 1 2 3
 
         for(int i = 1; i < 4; i++){ // first column
-            for(int j = 0; j <= 4; j++) {
+            for(int j = 0; j <= i; j++) {
                 for (int k = 0; k <= j; k++) {
+
                     System.out.println(i + " " + j + " " + k);
                     oneMoveAway(i, j, k);
 
@@ -29,7 +30,18 @@ public class MyPlayer {
     public void oneMoveAway(int i, int j, int k){
         // for each ijk board, print all boards that result
         // after a single move
+        // i"m so lost
+        for(int x = k-1; x > 0; x--){
+            System.out.println(i+""+j+""+x);
+        }
+        for(int x = j; x > 0; x--){
+            if(x>=k){
+                System.out.println(i+""+x+""+k);
+            }else{
+                System.out.println(i +""+x+""+x);
+            }
 
+        }
 
     }
 
