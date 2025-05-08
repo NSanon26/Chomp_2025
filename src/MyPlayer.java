@@ -43,7 +43,9 @@ public class MyPlayer {
             }
 
         }
+        for (int x= i; x>0; x--){
 
+        }
     }
 
     public Point move(Chip[][] pBoard) {
