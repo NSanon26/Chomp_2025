@@ -19,7 +19,7 @@ public class MyPlayer {
             for(int j = 0; j <= i; j++) {
                 for (int k = 0; k <= j; k++) {
 
-                    System.out.println(i + " " + j + " " + k);
+                    System.out.println("Initial board: "+i + " " + j + " " + k);
                     oneMoveAway(i, j, k);
 
 
@@ -32,10 +32,10 @@ public class MyPlayer {
         // for each ijk board, print all boards that result
         // after a single move
         // i"m so lost
-        for(int x = k-1; x > 0; x--){
+        for(int x = k-1; x >= 0; x--){
             System.out.println(i+""+j+""+x);
         }
-        for(int x = j; x > 0; x--){
+        for(int x = j-1; x >= 0; x--){
             if(x>=k){
                 System.out.println(i+""+x+""+k);
             }else{
@@ -43,8 +43,14 @@ public class MyPlayer {
             }
 
         }
-        for (int x= i; x>0; x--){
-
+        for (int x= i-1; x>0; x--){
+            if (j<x && k<x) {
+                System.out.println(x+""+j+""+k);
+            } else if(k<x) {
+                System.out.println(x + "" + x + "" + k);
+            } else{
+                System.out.println(x+""+x+""+x);
+            }
         }
     }
 
